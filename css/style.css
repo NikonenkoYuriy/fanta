@@ -1,0 +1,344 @@
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+.wrapper {
+    position: relative;
+    width: 74%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 700;
+}
+.head {
+    position: fixed;
+    top: 20px;
+    width: 74%;
+    max-width: 1200px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.logo {
+    margin-left: 30px;
+}
+.honeycomb {
+    width: 30px;
+    height: 26px;
+    position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+    align-items: center;
+    margin: 3px 10px 3px 0;
+}
+.fas {
+    position: absolute;
+    z-index: 999;
+}
+.contacts-block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+    align-items: center;
+}
+.contacts-text {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Tunga sans-serif;
+}
+.header {
+    line-height: 85%;
+    width: 80%;
+    position: relative;
+    z-index: 500;
+    color: #fbebb7;
+    font-size: 57px;
+    margin-top: 152px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: 80px;
+}
+.mouse {
+    position: relative;
+    padding-bottom: 32px;
+    bottom: 27%;
+    left: 50%;
+      -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.mouseSvg{
+    width: 240px;
+}
+.mouse h5 {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    left: 6%;
+    bottom: 67%;
+    width: 300px;
+}
+.arrow-left {
+    position: absolute;
+    left: 27%;
+    bottom: 48%;
+      -webkit-animation-name: arrowLeft;
+    animation-name: arrowLeft;
+      -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+      -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+@-webkit-keyframes arrowLeft {
+    0% {
+        bottom: 48%;
+    }
+    50% {
+        bottom: 55%;
+    }
+    100% {
+        bottom: 48%;
+    }
+}
+@-webkit-keyframes arrow-Left {
+    0% {
+        bottom: 48%;
+    }
+    50% {
+        bottom: 55%;
+    }
+    100% {
+        bottom: 48%;
+    }
+}
+@keyframes arrow-Left {
+    0% {
+        bottom: 48%;
+    }
+    50% {
+        bottom: 55%;
+    }
+    100% {
+        bottom: 48%;
+    }
+}
+.arrow-right {
+    position: absolute;
+    right: 25%;
+    bottom: 28%;
+      -webkit-animation-name: arrowRight;
+    animation-name: arrowRight;
+      -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+      -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes arrowRight {
+    0% {
+        bottom: 28%;
+    }
+    50% {
+        bottom: 38%;
+    }
+    100% {
+        bottom: 28%;
+    }
+}
+
+@keyframes arrowRight {
+    0% {
+        bottom: 28%;
+    }
+    50% {
+        bottom: 38%;
+    }
+    100% {
+        bottom: 28%;
+    }
+}
+/*---------triangle------------*/
+.triangle-block {
+    position: fixed;
+    top: 15%;
+    right: -158px;
+    width: 325px;
+    height: 325px;
+      -webkit-transition: right 1s;
+    transition: right 1s;
+}
+.triangle-block img {
+    position: absolute;
+    top: 38%;
+    left: 28%;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+    width: 325px;
+    height: 325px;
+}
+.triangle {
+    opacity: .5;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    border-radius: 20%;
+      -webkit-transform: rotate(60deg) skewY(30deg) scaleX(.866);
+    transform: rotate(60deg) skewY(30deg) scaleX(.866);
+    cursor: pointer;
+}
+.triangle:before,
+.triangle:after {
+    position: absolute;
+    background: rgb(178, 63, 63);
+    content: '';
+}
+.triangle:before {
+    border-radius: 20% 20% 20% 53%;
+      -webkit-transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.triangle:after {
+    border-radius: 20% 20% 53% 20%;
+      -webkit-transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
+}
+.brown:before,
+.brown:after {
+    position: absolute;
+    background: rgba(249, 163, 62);
+    content: '';
+}
+.brown:before,
+.brown:after {
+    position: absolute;
+    background: rgba(249, 163, 62);
+    content: '';
+}
+.yellow {
+    z-index: 0;
+    position: fixed;
+    top: 25%;
+    /*    right:-300px;*/
+}
+.positionYellow {
+    right: -300px;
+}
+.yellowAnime {
+      -webkit-animation-name: yellowAnime;
+    animation-name: yellowAnime;
+      -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+@-webkit-keyframes yellowAnime {
+    0% {
+        right: -300px;
+        opacity: .5;
+
+    }
+    100% {
+        right: 30px;
+        opacity: .5;
+    }
+}
+@keyframes yellowAnime {
+    0% {
+        right: -300px;
+
+    }
+    100% {
+        right: 30px;
+    }
+}
+.brown {
+    z-index: -1;
+    overflow: hidden;
+    position: fixed;
+    top: 25%;
+    right: -300px;
+    /*    right:20px;*/
+}
+.human-img {
+      -webkit-animation-name: human;
+    animation-name: human;
+      -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+      -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+      -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes human {
+    0% {
+          -webkit-transform: rotate(0deg);
+        transform: rotate(0);
+    }
+    100% {
+          -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes human {
+    0% {
+          -webkit-transform: rotate(0deg);
+        transform: rotate(0);
+    }
+    100% {
+          -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.triangle-p {
+    font-size: 24px;
+    color: black;
+    position: fixed;
+    top: 33%;
+    right: -60px;
+    text-transform: uppercase;
+    line-height: 100%;
+      -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+      -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+/*-------container-back.--------*/
+#home {
+    background: url(../images/BackHome.jpg) no-repeat center top;
+    background-size: cover;
+}
+#alanya {
+    background: url(../images/alanya.jpg) no-repeat center center;
+    background-size: cover;
+}
+#kemer {
+    background: url(../images/kemer.jpg) no-repeat center center;
+    background-size: cover;
+}
+#izmir {
+    background: url(../images/izmir.jpg) no-repeat center center;
+    background-size: cover;
+}
+.boxStar {
+    width: 200px;
+    height: 200px;
+    margin: 25px auto;
+    background: black url(https://ununsplash.imgix.net/photo-1415302199888-384f752645d0?q=75&fm=jpg&s=823bdcc1b7ad955f5180efd352561016);
+    background-size: cover;
+      -webkit-clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+    clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0% 38%, 37% 38%);
+}

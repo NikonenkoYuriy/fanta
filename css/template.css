@@ -1,0 +1,364 @@
+
+@font-face {
+font-family:"Tunga";
+font-weight: normal;
+src:url('tunga.ttf') format("ttf");
+}
+@font-face {
+font-family:"Tunga";
+font-weight: bold;
+src:url('tungab.ttf')format("ttf");
+}
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Tunga, sans-serif;
+}
+/**
+ * Hide horizontal scrollbars, since we use the vertical ones to scroll to the right.
+ */
+body {
+    overflow-x: hidden;
+    background: url('') repeat top left;
+}
+input {
+    outline: none;
+}
+/**
+ * Important: keep position fixed, you can however use top:0 instead of bottom:0
+ * if you want to make it stick to the top of the browser.
+ */
+.scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+#wrapperSlides {
+    width: 400vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+/*---------main-content--------------*/
+.containerFluid {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+}
+/*------------.infoBlock-----------------*/
+.infoBlock {
+    position: fixed;
+    z-index: 200;
+    top: 1vh;
+    left: 52vw;
+    width: 20vw;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 15px;
+    opacity: 0;
+      -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+}
+.infoBlock.activeTour {
+    opacity: 1;
+}
+.infoBlock table {
+    border: 1px solid white;
+    border-spacing: 0;
+}
+.infoBlock td {
+    padding: 4px 7px;
+}
+.infoBlock tr:hover {
+    background-color: rgba(95, 250, 250, 0.6);
+}
+/*-----------.toursNav-------------*/
+.toursNav {
+    width: 100%;
+    height: 65px;
+    background-color: #010000;
+    opacity: .9;
+    position: fixed;
+    z-index: 999;
+    bottom: 27%;
+    left: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 5px #a35a07;
+}
+.toursNav-container {
+    position: relative;
+    width: 74%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+    align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #fc8800;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+/*------------toursFadeMenu-----------------*/
+.toursFadeMenu {
+    position: fixed;
+    z-index: -2;
+    top: 73%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+      -webkit-transition: height 1s;
+    transition: height 1s;
+}
+.toursNav:hover .toursFadeMenu {
+    height: 27%;
+}
+.toursNav:hover .social {
+    opacity: 1;
+}
+.toursFadeMenu_list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 68%;
+    max-width: 1100px;
+    height: 100%;
+    max-height: 200px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.toursFadeMenu_list ul {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #dfd422;
+    position: relative;
+    width: 13%;
+    line-height: 70%;
+}
+.toursFadeMenu_list ul::before {
+    content: url(../images/honeycombmenu.svg);
+    position: absolute;
+    z-index: 300;
+    top: -1%;
+    left: -15%;
+}
+.toursFadeMenu_list ul::after {
+    content: url(../images/borderLeft.svg);
+    position: absolute;
+    z-index: 200;
+    top: 15%;
+    left: -8%;
+}
+.toursFadeMenu_list ul li a {
+    color: #fbebb7;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: left !important;
+    padding: 3px 0;
+}
+.firstLi {
+    height: 30px;
+    position: relative;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.activeTour {
+    color: white;
+    margin-left: 25px;
+    position: relative;
+}
+.activeTour::before {
+    content: url(../images/aircraft.svg);
+    position: absolute;
+    top: 35%;
+    right: 105%;
+    z-index: 700;
+}
+#random,
+#prev,
+#next {
+    cursor: pointer;
+      -webkit-transition: color 1s;
+    transition: color 1s;
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+}
+#prev span {
+    margin-left: 20px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+#next span {
+    margin-right: 20px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+#prev svg,
+#next svg {
+    fill: #fc8800;
+}
+#random:hover {
+    color: #dfd422;
+}
+#random {
+      display: -webkit-box;
+      display: -ms-flexbox;
+    display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+    align-items: center;
+}
+#random img {
+    margin-right: 15px;
+}
+#hover {
+    color: #dfd422 !important;
+    fill: #dfd422 !important;
+}
+.inactiveBtn {
+    color: #361d02 !important;
+    fill: #361d02 !important;
+}
+.activBtn {
+    color: #fc8800 !important;
+    fill: #fc8800 !important;
+}
+.social {
+    position: absolute;
+    left: 50%;
+      -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -10px;
+    display: block;
+    width: 40%;
+    max-width: 800px;
+    text-align: center;
+    opacity: 0;
+      -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.social-icon {
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    line-height: 100%;
+    padding-top: 25px;
+}
+.social-icon a {
+    color: #a15700;
+    font-size: 20px;
+}
+.social-icon a:hover {
+    color: #fc8800;
+      -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.social-text {
+    color: white;
+    font-size: 10px;
+    margin-top: -15px;
+}
+/*--------triangleForm-----------*/
+.triangleForm {
+    width: 135px;
+    text-align: right;
+    line-height: 100%;
+    font-size: 15px;
+    position: absolute;
+    right: 45px;
+    top: 15%;
+    opacity: 0;
+      -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.triangleForm p {
+    margin-right: -17px;
+    margin-bottom: 5px;
+}
+.triangleForm form {
+    border-radius: 15px;
+    display: inline-block;
+    padding: 14px 9px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.triangleForm form input {
+    width: 135px;
+    border: none;
+    border-bottom: 1px solid rgba(251, 235, 183, 0.3);
+    background-color: rgba(255, 255, 255, 0);
+    height: 22px;
+}
+.submitBtn {
+    position: absolute;
+    bottom: -25%;
+    right: -15px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: black;
+    border: 1px solid #000;
+    width: 96px;
+    height: 23px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.positionRight {
+    right: -20px !important;
+}
+.show {
+    opacity: 1;
+}
+.hide {
+    opacity: 0;
+}
+/*
+№: 20187181271/2945 
+Прошу врахувати, що я проти спорудження цього кар'єру так як важаю, що екологічні наслідки врази переважають потенційні єкономічні переваги. 
+Ще раз прошу дослухатися до громади Вільнянського району: не дозволяйте будівництво цього кар'єру бо інакще це посилить соціальну напругу в боротьбі за своє право зазначене в ст. 50 Конституції України*/
